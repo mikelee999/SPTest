@@ -1,0 +1,78 @@
+<% include partials/header %>
+
+<header class="jumbotron">
+    <div class="container">
+        <h1>
+            <span class="glyphicon glyphicon-credit-card"></span> One Wallet!
+            <p>This is the walletsSHOW page</p>
+            <a class="btn btn-primary btn-lg" href="/walletsINDEX">View All Wallets</a>
+            <a class="btn btn-primary btn-lg" href="/walletsNEW">Add a Wallet</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrieveWallets">Retrieve Wallets from SP</button>
+            <a class="btn btn-primary btn-lg" href="/">Home</a>
+        </h1>
+
+    </div>
+</header>
+
+<form action="/walletsRetrieveCREATE" method="POST" id="RetrieveWallets"></form>
+
+<div class="container">
+    <table style="width:45%">
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+        <td>mobile_phone</td>
+        <td><%= foundWallet.mobile_phone %></td>
+        </tr>
+        <tr>
+            <td>program_name</td>
+            <td><%= foundWallet.program_name %></td>
+        </tr>
+        <tr>
+            <td>program_owner_name</td>
+            <td><%= foundWallet.program_owner_name %></td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td><%= foundWallet.id %></td>
+        </tr>
+        <tr>
+            <td>immutable_id</td>
+            <td><%= foundWallet.immutable_id %></td>
+        </tr>
+        <tr>
+            <td>program_id</td>
+            <td><%= foundWallet.program_id %></td>
+        </tr>
+        <tr>
+            <td>user_id</td>
+            <td><%= foundWallet.user_id %></td>
+        </tr>
+        <tr>
+            <td>creation_date</td>
+            <td><%= foundWallet.create_date %></td>
+        </tr>
+        <tr>
+            <td>update_time</td>
+            <td><%= foundWallet.update_time %></td>
+        </tr>
+        <tr>
+            <td>Database Record ID</td>
+            <td><%= foundWallet._id %></td>
+        </tr>
+    </table>
+</div>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>

@@ -1,0 +1,52 @@
+<% include partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+    <div class="container">
+        <h1>
+            SPTest Home Page<br>
+            <p>This is the main index page</p>
+            <a class="btn btn-primary btn-lg" href="/walletsINDEX">View All Wallets</a>
+            <a class="btn btn-primary btn-lg" href="/walletsNew">New Wallet</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrieveWallets">Retrieve Wallets from SP</button><br>
+            <a class="btn btn-primary btn-lg" href="/programsINDEX">View All Programs</a>
+            <a class="btn btn-primary btn-lg" href="/programsNew">New Program</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrievePrograms">Retrieve Programs from SP</button><br>
+            <a class="btn btn-primary btn-lg" href="/usersINDEX">View All Users</a>
+            <a class="btn btn-primary btn-lg" href="/usersNew">New User</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrieveUsers">Retrieve Users from SP</button>
+        </h1>
+    </div>
+</header>
+</div>
+
+<form action="/walletsRetrieveCREATE" method="POST" id="RetrieveWallets"></form>
+<form action="/programsRetrieveCREATE" method="POST" id="RetrievePrograms"></form>
+<form action="/walletsRetrieveCREATE" method="POST" id="RetrieveUsers"></form>
+
+
+<div class="container">
+    <form action="/dcr" method="POST">
+        <input type="text" name="newdcr" placeholder="Design Change Request">
+        <input type="submit" value="Submit"</button>
+    </form>
+</div>
+
+<br><br><br>
+
+<!--<div class="container">-->
+<!--    <form action="/walletsRetrieveCREATE" method="POST">-->
+<!--        <input type="submit" value="Retrieve Spuukee wallets"</button>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+
+<!--<div class="row">-->
+<!--        <p>this is the row</p>-->
+<!--        <div class="col-lg-12">-->
+<!--            <p>this is the lg 12</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<% include partials/footer %>

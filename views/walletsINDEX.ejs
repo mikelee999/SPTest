@@ -1,0 +1,54 @@
+<% include partials/header %>
+
+<header class="jumbotron">
+    <div class="container">
+        <h1>
+            <span class="glyphicon glyphicon-credit-card"></span> Welcome to Wallet World!
+            <p>This is the walletsINDEX page</p>
+            <a class="btn btn-primary btn-lg" href="/walletsNEW">Add a Wallet</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrieveWallets">Retrieve Wallets from SP</button>
+            <a class="btn btn-primary btn-lg" href="/">Home</a>
+        </h1>
+    </div>
+</header>
+
+<form action="/walletsRetrieveCREATE" method="POST" id="RetrieveWallets"></form>
+
+<div class="container">
+ <div class="row text-left" style="display:flex; flex-wrap: wrap;">
+    <% walletsFromDB.forEach(function(wallet, index, array){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail center-caption">
+                <a href="/walletsINDEX/<%= wallet._id %>">
+                   <h6 class="matchcriteria<">
+                     Phone: <%= wallet.mobile_phone %><br>
+                     PName: <%= wallet.program_name %><br>
+                    POwner: <%= wallet.program_owner_name %><br>
+                        ID: <%= wallet.id %><br>
+                       IID: <%= wallet.immutable_id %><br>
+                       PID: <%= wallet.program_id %><br>
+                       UID: <%= wallet.user_id %><br>
+                     CDate: <%= wallet.create_date %><br>
+                     UTime: <%= wallet.update_time %><br>
+                   </h6>
+                   <div class="caption">
+                        <h5><center><%= wallet.status %></c></center></h5>
+                   </div>
+                  </a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>

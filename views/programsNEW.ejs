@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<h1>This is the programsNEW page</h1>
+
+
+<div class="container">
+    <form action="/programsRetrieveCREATE" method="POST">
+        <!--<input type="button" placeholder="Retrieve Spuukee Wallets">-->
+        <input type="submit" value="Retrieve Spuukee programs"</button>
+    </form>
+</div>
+
+<p>Or . . .</p>
+
+<div class="container">
+    <form action="/programsCREATE" method="POST">
+        <fieldset>
+            <legend>Create New Program</legend>
+        <input type="text" name="program_owner" placeholder="Program Owner">
+        <br>
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <input type="text" name="language" placeholder="Language">
+        <br>
+        <input type="text" name="region" placeholder="Region">
+        <br>
+        <br>
+        <input type="submit" value="Create New Program"</button>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+<% include partials/footer %>

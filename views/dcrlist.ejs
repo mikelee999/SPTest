@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+<h1>DCR List</h1>
+</header>
+</div>
+
+<div class="container">
+<% contentLines.forEach(function(val,index,arr){ %>
+  <li><%= val %></li>
+<% }); %>
+</div>
+
+<div class="container">
+    <form action="/dcr" method="POST">
+        <input type="text" name="newdcr" placeholder="Design Change Request">
+        <input type="submit" value="Submit"</button>
+    </form>
+</div>
+
+
+<% include partials/footer %>

@@ -1,0 +1,73 @@
+<% include partials/header %>
+
+<header class="jumbotron">
+    <div class="container">
+        <h1>
+            <span class="glyphicon glyphicon-credit-card"></span> One User!
+            <p>This is the usersSHOW page</p>
+            <a class="btn btn-primary btn-lg" href="/usersINDEX">View All Users</a>
+            <a class="btn btn-primary btn-lg" href="/usersNEW">Add a User - Broken</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrieveUsers">Retrieve Users from SP</button>
+            <a class="btn btn-primary btn-lg" href="/">Home</a>
+        </h1>
+
+    </div>
+</header>
+
+<form action="/usersRetrieveCREATE" method="POST" id="RetrieveUsers"></form>
+
+<div class="container">
+    <table style="width:45%">
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+        <td>Given Name</td>
+        <td><%= foundUser.given_name %></td>
+        </tr>
+        <tr>
+            <td>Family Name</td>
+            <td><%= foundUser.family_name %></td>
+        </tr>
+        <tr>
+            <td>Birth Date</td>
+            <td><%= foundUser.birth_date %></td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td><%= foundUser.id %></td>
+        </tr>
+        <tr>
+            <td>Email Address</td>
+            <td><%= foundUser.email %></td>
+        </tr>
+        <tr>
+            <td>Mobile Phone</td>
+            <td><%= foundUser.mobile_phone %></td>
+        </tr>
+        <tr>
+            <td>user_id</td>
+            <td><%= foundUser.user_id %></td>
+        </tr>
+        <tr>
+            <td>creation_date</td>
+            <td><%= foundUser.create_date %></td>
+        </tr>
+        <tr>
+            <td>update_time</td>
+            <td><%= foundUser.update_time %></td>
+        </tr>
+        <tr>
+            <td>Database Record ID</td>
+            <td><%= foundUser._id %></td>
+        </tr>
+    </table>
+</div>
+<br><br><br>
+
+
+
+
+
+

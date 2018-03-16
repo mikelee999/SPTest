@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+<h1>This is the walletsNEW page</h1>
+
+
+<div class="container">
+    <form action="/walletsRetrieveCREATE" method="POST">
+        <!--<input type="button" placeholder="Retrieve Spuukee Wallets">-->
+        <input type="submit" value="Retrieve Spuukee wallets"</button>
+    </form>
+</div>
+
+<p>Or . . .</p>
+
+<div class="container">
+    <form action="/walletsCREATE" method="POST">
+        <fieldset>
+            <legend>Create New Wallet</legend>
+        <input type="text" name="mobile_phone" placeholder="Mobile Phone">
+        <br>
+        <input type="text" name="program_name" placeholder="Program Name">
+        <br>
+        <input type="text" name="program_id" placeholder="Program ID">
+        <br>
+        <input type="text" name="program_owner_name" placeholder="Program Owner Name">
+        <br>
+        <input type="text" name="program_owner_id" placeholder="Program Owner ID">
+        <br>
+        <br>
+        <input type="submit" value="Create New Wallet"</button>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+<% include partials/footer %>

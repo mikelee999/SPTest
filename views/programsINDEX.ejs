@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<header class="jumbotron">
+    <div class="container">
+        <h1>
+            <span class="glyphicon glyphicon-credit-card"></span> Program List
+            <p>This is the programsINDEX page</p>
+            <a class="btn btn-primary btn-lg" href="/programsNEW">Add a Program</a>
+            <button type="submit" class="btn btn-primary btn-lg" form="RetrievePrograms">Retrieve Program List from SP</button>
+            <a class="btn btn-primary btn-lg" href="/">Home</a>
+        </h1>
+    </div>
+</header>
+
+<form action="/programsRetrieveCREATE" method="POST" id="RetrievePrograms"></form>
+
+<div class="container">
+ <div class="row text-left" style="display:flex; flex-wrap: wrap;">
+    <% programsFromDB.forEach(function(program, index, array){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail center-caption">
+                <a href="/programsINDEX/<%= program._id %>">
+                   <p class="walletthumb">
+                     OWNER: <%= program.program_owner %><br>
+                      NAME: <%= program.name %><br>
+            Match Criteria:<br> 
+            <mc>Language: <%= program.match_criteria[0].language %></mc><br>
+            <mc>Region - <%= program.match_criteria[0].region %></mc><br>
+                   Version: <%= program.record_version %><br>
+               Update Time: <%= program.update_time %><br>
+
+                   <p>
+                   <div class="caption">
+                        <h5><center><%= program.status %></c></center></h5>
+                   </div>
+                  </a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+<p class="matchcriteria">WHATTHEEFF!!!!</p>
+
